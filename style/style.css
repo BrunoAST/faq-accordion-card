@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gradient-violet: hsl(273, 75%, 66%);
+    --gradient-blue: hsl(240, 73%, 65%);
+    --text-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --text-dark-grayish-blue: hsl(240, 6%, 50%);
+    --divider: hsl(240, 5%, 91%);
+    --orange: #FF9271;
+}
+
+body {
+    max-width: 1440px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(var(--gradient-violet), var(--gradient-blue));
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+}
+
+.image {
+    position: relative;
+    background-image:
+            url(../images/illustration-woman-online-desktop.svg),
+            url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left -75px top 60px, left -480px top -250px;
+    background-size: 25rem, 50rem;
+}
+
+.image .box {
+    position: absolute;
+    left: -130px;
+    top: 160px;
+    max-width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 100px 60px 0;
+}
+
+.content .title {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.question-answer {
+    font-weight: 400;
+    color: var(--text-very-dark-grayish-blue);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--divider);
+    width: 100%;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: .8rem;
+    height: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question:hover {
+    color: var(--orange);
+}
+
+.question::after {
+    content: "";
+    background-image: url(../images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 10px;
+    height: 10px;
+    align-self: center;
+}
+
+.answer {
+    color: var(--text-dark-grayish-blue);
+    line-height: 1.2rem;
+    /*display: none;*/
+}
+
+@media (max-width: 375px) {
+
+}
